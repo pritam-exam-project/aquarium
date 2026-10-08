@@ -25,12 +25,12 @@ An animated virtual aquarium created with HTML and CSS. The aquarium features sw
 
 ## Technologies
 
-| Technology | Description |
-| --- | --- |
-| [![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML) | Page structure and aquarium content |
-| [![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS) | Layout, styling, and visual design |
-| [![CSS Animations](https://img.shields.io/badge/CSS%20Animations-4285F4?logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations) | Fish, bubbles, water, and decoration animations |
-| [![CSS Transitions](https://img.shields.io/badge/CSS%20Transitions-7952B3?logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transitions) | Smooth hover and interaction effects |
+| Technology                                                                                                                                                              | Description                                     |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
+| [![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)                                     | Page structure and aquarium content             |
+| [![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)                                         | Layout, styling, and visual design              |
+| [![CSS Animations](https://img.shields.io/badge/CSS%20Animations-4285F4?logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations)    | Fish, bubbles, water, and decoration animations |
+| [![CSS Transitions](https://img.shields.io/badge/CSS%20Transitions-7952B3?logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transitions) | Smooth hover and interaction effects            |
 
 ---
 
@@ -44,9 +44,16 @@ An animated virtual aquarium created with HTML and CSS. The aquarium features sw
 
 ## Getting Started
 
-Open `aquarium.html` in a web browser.
+1. Clone the repository.
+2. Open `index.html` in a web browser.
 
 No build tools or dependencies are required.
+
+---
+
+## Live Demo
+
+[View the live virtual aquarium demo](https://pritam-exam-project.github.io/aquarium/)
 
 ---
 

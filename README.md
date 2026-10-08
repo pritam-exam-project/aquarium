@@ -36,9 +36,13 @@ An animated virtual aquarium created with HTML and CSS. The aquarium features sw
 
 ## Project Structure
 
-- `aquarium.html` - Structure and content for the aquarium
-- `aquarium.css` - Layout, styling, animations, and interactions
-- `images/` - Fish and underwater decoration images
+```text
+Aquarium/
+├── aquarium.html   # Structure and content for the aquarium
+├── aquarium.css    # Layout, styling, animations, and interactions
+├── images/         # Fish and underwater decoration images
+└── README.md       # Project documentation
+```
 
 ---
 

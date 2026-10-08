@@ -1,0 +1,586 @@
+/*Styling for body*/
+body {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    background-color: rgb(241, 247, 232);
+    justify-content: center;
+}
+
+/*Styling for aquarium*/
+#aquarium-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100px;
+    height: 500px;
+    width: 1000px;
+    border: 2px solid rgb(83, 82, 82);
+}
+
+#air-space {
+    flex: 1;
+}
+
+@keyframes water-movement {
+    from {
+        height: 65%;
+    }
+
+    to {
+        height: 65.5%;
+    }
+}
+
+#water-container {
+    width: 100%;
+    background: linear-gradient(to bottom, rgb(71, 203, 255), rgb(78, 157, 236));
+    animation-name: water-movement;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+/*Creating 3 fish sizes: small, medium, large*/
+.small-fish {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+}
+
+.medium-fish {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+}
+
+.large-fish {
+    position: absolute;
+    height: 80px;
+    width: 80px;
+}
+
+/*Position and animation of fish 1 and 2 crossing each other*/
+@keyframes fishCrossingToRight {
+    0% {
+        transform: translate(0px);
+    }
+
+    25% {
+        top: 60px;
+        transform: translate(450px);
+    }
+
+    50% {
+        transform: translate(950px);
+        top: 60px;
+    }
+
+    51% {
+        top: 60px;
+        transform: translate(960px) rotateY(180deg);
+    }
+
+    60% {
+        transform: translate(800px) rotateY(180deg);
+    }
+
+    75% {
+        top: 60px;
+        transform: translate(450px) rotateY(180deg);
+    }
+
+    90% {
+        top: 80px;
+        transform: translate(200px) rotateY(180deg);
+    }
+
+    99% {
+        transform: translate(0px) rotateY(180deg);
+    }
+
+    100% {
+        transform: translate(0px);
+    }
+}
+
+#fish-1 {
+    top: 80px;
+    animation-name: fishCrossingToRight;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes fishCrossingToLeft {
+    0% {
+        transform: translate(950px) rotateY(180deg);
+    }
+
+    25% {
+        top: 100px;
+        transform: translate(450px) rotateY(180deg);
+    }
+
+    50% {
+        transform: translate(0px) rotateY(180deg);
+        top: 60px;
+    }
+
+    51% {
+        top: 60px;
+        transform: translate(0px);
+    }
+
+    60% {
+        transform: translate(350px);
+    }
+
+    75% {
+        top: 100px;
+        transform: translate(600px);
+    }
+
+    90% {
+        top: 80px;
+        transform: translate(850px);
+    }
+
+    99% {
+        transform: translate(950px);
+    }
+
+    100% {
+        transform: translate(950px) rotateY(180deg);
+    }
+}
+
+#fish-2 {
+    top: 80px;
+    animation-name: fishCrossingToLeft;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+/*Position and animation of fish 3, 4 and 5 (family fishes)*/
+
+@keyframes familyFishAnim {
+    0% {
+        transform: translate(0px) rotateZ(-22deg);
+    }
+
+    10% {
+        transform: translate(200px, -70px) rotateZ(-22deg);
+    }
+
+    20% {
+        transform: translate(400px, -70px);
+    }
+
+    30% {
+        transform: translate(600px, -70px) rotateZ(22deg);
+    }
+
+    40% {
+        transform: translate(800px, -40px);
+    }
+
+    50% {
+        transform: translate(900px, -30px);
+    }
+
+    51% {
+        transform: translate(900px, -30px) rotateY(180deg);
+    }
+
+    60% {
+        transform: translate(800px, -30px) rotateY(180deg) rotateZ(-22deg);
+    }
+
+    70% {
+        transform: translate(600px, -50px) rotateY(180deg);
+    }
+
+    80% {
+        transform: translate(400px, -45px) rotateY(180deg) rotateZ(22deg);
+    }
+
+    90% {
+        transform: translate(200px, -35px) rotateY(180deg) rotateZ(22deg);
+    }
+
+    99% {
+        transform: translate(0px) rotateY(180deg);
+    }
+
+    100% {
+        transform: translate(0px);
+    }
+}
+
+#fish-3 {
+    top: 200px;
+    animation-name: familyFishAnim;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#fish-4 {
+    top: 240px;
+    animation-name: familyFishAnim;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#fish-5 {
+    top: 260px;
+    left: 20px;
+    animation-name: familyFishAnim;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shyFishAnim {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateZ(8deg);
+    }
+}
+
+/*Position and animation of fish-6 (a shy-fish)*/
+#fish-6 {
+    top: 335px;
+    left: 90px;
+    animation-name: shyFishAnim;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    transition-property: left;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+    cursor: pointer;
+}
+
+#fish-6:hover {
+    left: 10px;
+}
+
+/*Position and animation of fish-7*/
+@keyframes fish7Anim {
+    0% {
+        transform: translate(550px, 350px) rotateZ(-45deg);
+    }
+
+    20% {
+        transform: translate(650px, 250px) rotateZ(-45deg);
+    }
+
+    40% {
+        transform: translate(750px, 0px) rotateZ(-45deg);
+    }
+
+    51% {
+        transform: translate(850px, 0px);
+    }
+
+    55% {
+        transform: translate(920px, 50px);
+    }
+
+    60% {
+        transform: translate(900px, 70px) rotateZ(-45deg) rotateY(-180deg);
+    }
+
+    70% {
+        transform: translate(800px, 100px) rotateZ(-45deg) rotateY(-180deg);
+    }
+
+    80% {
+        transform: translate(750px, 150px) rotateZ(-45deg) rotateY(-180deg);
+    }
+
+    90% {
+        transform: translate(650px, 250px) rotateZ(-45deg) rotateY(-180deg);
+    }
+
+    99% {
+        transform: translate(550px, 300px) rotateZ(-45deg) rotateY(-180deg);
+    }
+
+    100% {
+        transform: translate(550px, 350px);
+    }
+}
+
+#fish-7 {
+    animation-name: fish7Anim;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+/*Position and animation of fish-8 (slow-fish, on mouse click swims faster) and 9*/
+@keyframes swim {
+    0% {
+        transform: translate(0px);
+    }
+
+    25% {
+        transform: translate(450px);
+    }
+
+    50% {
+        transform: translate(900px);
+    }
+
+    51% {
+        transform: translate(920px) rotateY(180deg);
+    }
+
+    60% {
+        transform: translate(800px) rotateY(180deg);
+    }
+
+    75% {
+        transform: translate(450px) rotateY(180deg);
+    }
+
+    90% {
+        transform: translate(200px) rotateY(180deg);
+    }
+
+    99% {
+        transform: translate(0px) rotateY(180deg);
+    }
+
+    100% {
+        transform: translate(0px);
+    }
+}
+
+#fish-8 {
+    top: 100px;
+    animation-name: swim;
+    animation-duration: 50s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    cursor: pointer;
+}
+
+#fish-8:active {
+    animation: swim 2s infinite linear;
+}
+
+#fish-9 {
+    top: 250px;
+    animation-name: swim;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#bottom {
+    display: flex;
+    justify-content: space-around;
+    height: 25%;
+    width: 100%;
+    background-color: rgb(140, 84, 28);
+}
+
+/*Styling and animations for bottom-contents*/
+#green-coral {
+    position: absolute;
+    margin-left: -1000px;
+}
+
+#green-coral>img {
+    position: absolute;
+    height: 90px;
+    margin-top: -50px;
+}
+
+#coral-2 {
+    margin-left: 10px;
+}
+
+#coral-3 {
+    margin-left: 20px;
+}
+
+@keyframes bottomItemsSway {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(5deg);
+    }
+}
+
+/*Corals movement animation*/
+.coral {
+    animation-name: bottomItemsSway;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.shell {
+    height: 50px;
+    width: 50px;
+}
+
+/*Round-shell movement animation and action on hover*/
+#shell-1 {
+    position: absolute;
+    margin-top: 50px;
+    margin-left: -700px;
+    animation-name: bottomItemsSway;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    cursor: pointer;
+}
+
+#shell-1:hover {
+    animation-play-state: paused;
+    filter: drop-shadow(0 0 10px rgb(255, 255, 35));
+}
+
+/*Starfish position animation and action on hover*/
+@keyframes rotateStarfish {
+    from {
+        transform: rotate(20deg);
+    }
+
+    to {
+        transform: rotate(-20deg);
+    }
+}
+
+#starfish {
+    position: absolute;
+    margin-top: 50px;
+    height: 70px;
+    width: 70px;
+    cursor: pointer;
+    transition-property: opacity;
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 500ms;
+}
+
+#starfish:hover {
+    animation-name: rotateStarfish;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+}
+
+#shell-2 {
+    position: absolute;
+    margin-left: 900px;
+    margin-top: 70px;
+}
+
+#coral-4 {
+    position: absolute;
+    height: 90px;
+    width: 90px;
+    margin-top: -50px;
+    margin-left: 600px;
+}
+
+#coral-5 {
+    position: absolute;
+    height: 90px;
+    width: 90px;
+    margin-top: -20px;
+    margin-left: -350px;
+}
+
+/*Creating and animating bubbles*/
+#bubble-holder {
+    position: absolute;
+    margin-left: 580px;
+    width: 20px;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+#bubbles-1,
+#bubbles-2,
+#bubbles-3 {
+    position: absolute;
+    box-shadow: inset 0 0 25px 1;
+    background-color: rgb(255, 255, 255);
+}
+
+@keyframes bubbles-anim {
+    0% {
+        opacity: 0.4;
+        margin-top: -40px;
+        height: 20px;
+        width: 20px;
+    }
+
+    30% {
+        opacity: 0.3;
+        margin-top: -160px;
+        height: 40px;
+        width: 40px;
+    }
+
+    60% {
+        opacity: 0.2;
+        margin-top: -300px;
+        height: 60px;
+        width: 60px;
+    }
+
+    100% {
+        opacity: 0;
+        margin-top: -380px;
+        height: 80px;
+        width: 80px;
+    }
+}
+
+#bubbles-1 {
+    margin-left: 550px;
+    animation-name: bubbles-anim;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#bubbles-2 {
+    margin-left: 600px;
+    animation-name: bubbles-anim;
+    animation-duration: 4s;
+    animation-delay: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#bubbles-3 {
+    margin-left: 650px;
+    animation-name: bubbles-anim;
+    animation-duration: 4s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
